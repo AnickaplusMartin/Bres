@@ -23,3 +23,4 @@ f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector
 fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){return r.json()}).then(function(j){m.textContent=j.msg;if(j.ok){f.reset();t.value=Date.now()}b.disabled=false}).catch(function(){m.textContent='Odeslání se nepodařilo. Napište prosím na bres@bres.cz nebo zavolejte.';b.disabled=false})});})();
 (function(){var m=document.querySelector('.map');if(!m)return;var b=m.querySelector('button'),f=m.querySelector('iframe');
 b.addEventListener('click',function(){f.src=f.dataset.src;m.querySelector('.map-ph').remove()});})();
+(function(){var i=document.querySelectorAll('.bg img[data-src]');if(!i.length)return;function l(){[].forEach.call(i,function(e){e.src=e.dataset.src})}if(document.readyState==='complete')l();else addEventListener('load',l);})();
