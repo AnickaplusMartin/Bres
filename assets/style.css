@@ -3,7 +3,7 @@
 :root{--teal:#0a6f91;--teal-l:#4cc3e8;--ink:#10222c;--slate:#06222f;--mut:#5d6977;--line:#e3e8ee;--orange:#f06028;--orange-d:#b9440f;--bg:#f5f8fa;--w:1180px}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}
 .skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--ink);color:#fff;padding:10px 16px}.skip:focus{left:8px}
-body{margin:0;font:400 17px/1.65 Inter,system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+body{margin:0;font:400 17px/1.65 Inter,"Inter Fallback",system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
 a{color:var(--teal);text-underline-offset:3px}a:hover{color:var(--ink)}
 :focus-visible{outline:3px solid var(--orange-d);outline-offset:2px}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
@@ -142,3 +142,14 @@ nav>ul>li:hover>a{color:var(--teal-l)}
 .kids{margin-top:8px}.kids a{display:block}.kids strong{display:block;font-size:18px}.kids span{display:block;font-weight:400;color:var(--mut);margin-top:6px;font-size:15.5px}.kids a:hover span{color:#fff}
 .sos svg{display:none}
 @media(max-width:1180px){.hd .in{gap:10px}.sos{display:flex;order:2;margin:0 0 0 auto;width:46px;height:46px;padding:0;align-items:center;justify-content:center}.sos span,.sos b{display:none}.sos svg{display:block}.burger{order:3}nav{order:4}}
+@media(max-width:800px){.ban.has{background:linear-gradient(90deg,rgba(6,34,47,.9),rgba(6,34,47,.52)),var(--bm,var(--bi)) var(--bp,center)/cover}.cta{background:linear-gradient(rgba(6,34,47,.82),rgba(6,34,47,.82)),var(--bm,var(--bi,none)) center/cover,var(--slate)}}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;transition-delay:calc(var(--i,0)*70ms)}.js .rv.in{opacity:1;transform:none}
+@media print{.js .rv{opacity:1!important;transform:none!important}}
+.btn b{display:flex;align-items:center}.btn b svg,.down svg{display:block}.ctl button.pp{display:flex;align-items:center;justify-content:center}.ctl button.pp svg{display:block}
+html:not(.js) .filters{display:none}
+.nav-cta{display:none}
+@media(min-width:1181px){nav{display:flex;align-items:center;gap:6px}}
+@media(min-width:1260px){.nav-cta{display:inline-flex;align-items:center;margin-left:10px;padding:10px 16px;border:1px solid rgba(255,255,255,.6);color:#fff;font-size:14.5px;font-weight:600;text-decoration:none;white-space:nowrap}.nav-cta:hover{background:#fff;color:var(--ink)}}
+@media(max-width:1180px){.nav-cta{display:block;margin:8px 24px 18px;padding:13px 18px;text-align:center;border:1px solid var(--orange);color:var(--ink);font-weight:600;text-decoration:none}}
+@media(max-width:1180px){nav{max-height:calc(100vh - 84px);max-height:calc(100dvh - 84px)}nav>ul>li>a{padding:12px 24px}nav li li a{padding:9px 20px}}
+@font-face{font-family:"Inter Fallback";src:local("Arial");size-adjust:107.4%;ascent-override:90.2%;descent-override:22.5%;line-gap-override:0%}
